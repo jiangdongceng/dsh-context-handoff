@@ -45,7 +45,7 @@ The prompt asks the model to preserve exact paths, commands, identifiers, names,
 
 - The source conversation text is sent to the model that writes the brief. The UI states this before generation.
 - Only the generated context brief is sent to the new conversation. Raw messages are not copied.
-- Briefs are stored as JSON at `<DSH_HOME>/context-handoff/briefs.json` by default. If the dedicated folder `D:\dsh\context-handoff` already exists, the plugin reuses it. Set a `dataDir` plugin config value or the `DSH_CONTEXT_HANDOFF_DIR` environment variable to choose another absolute directory.
+- Briefs are stored as JSON at `<DSH_HOME>/context-handoff/briefs.json` by default. If the dedicated folder `D:\dsh\context-handoff` already exists, the plugin reuses it. Set a `dataDir` plugin config value or the `DSH_CONTEXT_HANDOFF_DIR` environment variable to choose another absolute directory. Every write keeps the previous file as `briefs.json.bak`.
 - The plugin registers authenticated routes under `/api/handoff/*` through DSH's connection service; they are available only to the owner Peer.
 
 ## Good to know

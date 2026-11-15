@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-context-handoff",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "Capture a conversation's setting and background in an AI-written brief, then start a clean conversation with that context without resuming the old task.",

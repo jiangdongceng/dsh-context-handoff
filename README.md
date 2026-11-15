@@ -83,7 +83,7 @@ DSH 的上下文窗口会被长对话慢慢吃满。`/compact` 是在原会话�
 - 新对话只收到摘要，不接收旧对话原文。
 - 默认数据目录为 `<DSH_HOME>/context-handoff`；如果 `D:\dsh\context-handoff` 已存在，会优先使用它。
 - 可用 bundle 配置里的 `dataDir` 或环境变量 `DSH_CONTEXT_HANDOFF_DIR` 指定其他绝对路径。
-- 数据文件是 `briefs.json`，插件不写入 DSH 核心包。
+- 数据文件是 `briefs.json`；每次写入前会把上一版留成 `briefs.json.bak`。插件不写入 DSH 核心包。
 
 ## 兼容性
 
