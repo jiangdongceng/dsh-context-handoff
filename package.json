@@ -1,0 +1,62 @@
+{
+  "name": "@local/dsh-context-handoff",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Capture a conversation's setting and background in an AI-written brief, then start a clean conversation with that context without resuming the old task.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangdongceng/dsh-context-handoff.git"
+  },
+  "homepage": "https://github.com/jiangdongceng/dsh-context-handoff#readme",
+  "bugs": {
+    "url": "https://github.com/jiangdongceng/dsh-context-handoff/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "context",
+    "handoff",
+    "summarization",
+    "ai"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "test": "node test/handoff.test.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "test"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}

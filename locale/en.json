@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Conversation context",
+    "description": "Capture a conversation's setting and background in an AI-written brief, then start a clean conversation with that context without resuming the old task.",
+    "detail": "docs/DETAIL.md"
+  }
+}
